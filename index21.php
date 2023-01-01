@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table of Even or Odd</title>
+</head>
+<body>
+    <h1>Write the Table with Even and Odd Multiplication</h1>
+    <form action="#" method="POST">
+        <label>Enter your number</label>
+        <input type="text" name="n1">
+        <label>To which Number? Want it to multiply with Even or Odd?</label>
+        <input type="text" name="n2">
+        <input type="submit" name="submit">
+    </form>
+</body>
+</html>
+
+<?php
+if(isset($_POST['submit'])){
+    $n1 = $_POST['n1'];
+    $n2 = $_POST['n2'];
+    if($n2%2==0){
+    for ($i=2;$i%2==0;$i++ && $i++){
+        $result = $n1 * $i;
+        echo $n1 . " x " . $i . " = " . $result;   
+        echo "<br>";  
+        if($i==$n2){
+            break;
+        }
+        }
+    }else{
+        for($i=1;$i<=$n2;$i++ && $i++){
+            $result = $n1 * $i;
+            echo $n1 . " x " . $i . " = " . $result;
+            echo "<br>";
+        }
+    }
+    }
+?>
