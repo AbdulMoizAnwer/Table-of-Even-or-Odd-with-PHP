@@ -19,6 +19,8 @@
 </html>
 
 <?php
+
+//FOR LOOP
 if(isset($_POST['submit'])){
     $n1 = $_POST['n1'];
     $n2 = $_POST['n2'];
@@ -39,4 +41,61 @@ if(isset($_POST['submit'])){
         }
     }
     }
+
+//WHILE LOOP
+if(isset($_POST['submit'])){
+    $n1 = $_POST['n1'];
+    $n2 = $_POST['n2'];
+    if($n2%2==0){
+        $i = 2;
+    while($i%2==0){
+        $result = $n1 * $i;
+        echo $n1 . " x " . $i . " = " . $result;   
+        echo "<br>";
+        $i++ && $i++;
+        if($i==$n2){
+            $result = $n1 * $i;
+            echo $n1 . " x " . $i . " = " . $result;   
+            break;
+        }
+    }
+    }else{
+        $i = 1;
+        while($i<=$n2){
+            $result = $n1 * $i;
+            echo $n1 . " x " . $i . " = " . $result;
+            echo "<br>";
+            $i++ && $i++;
+        }
+    }
+    }
+
+
+//DO WHILE LOOP
+if(isset($_POST['submit'])){
+    $n1 = $_POST['n1'];
+    $n2 = $_POST['n2'];
+    if($n2%2==0){
+        $i = 2;
+    do{
+        $result = $n1 * $i;
+        echo $n1 . " x " . $i . " = " . $result;   
+        echo "<br>";
+        $i++ && $i++;
+        if($i==$n2){
+            $result = $n1 * $i;
+            echo $n1 . " x " . $i . " = " . $result;   
+            break;
+        }
+    }while($i%2==0);
+    }else{
+        $i = 1;
+        do{
+            $result = $n1 * $i;
+            echo $n1 . " x " . $i . " = " . $result;
+            echo "<br>";
+            $i++ && $i++;
+        }while($i<=$n2);
+    }
+}
 ?>
